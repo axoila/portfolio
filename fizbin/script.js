@@ -1,41 +1,25 @@
 var hue = 0;
 var dotsRoot = document.getElementById("dots");
+var context = dotsRoot.getContext("2d");
 var trailToggle = document.getElementById("disableTrail");
 var dots = [];
-var length = 30;
-var radius = 15;
-
-var lastPoint = null;
-var trail = true;
+var radius = 30;
+var canvasSize = {width:0, height:0}
 
 function drawdot(event) {
-    if (trail) {
-        var point = { x: event.pageX, y: event.pageY };
-        if (lastPoint === null)
-            lastPoint = point;
-    
-        difference = { x: point.x - lastPoint.x, y: point.y - lastPoint.y };
-        distance = Math.sqrt(difference.x * difference.x + difference.y * difference.y);
-        while (distance > radius) {
-            lastPoint = { x: lastPoint.x + difference.x * radius / distance, y: lastPoint.y + difference.y * radius / distance };
-
-            makeDot(lastPoint);
-            difference = { x: point.x - lastPoint.x, y: point.y - lastPoint.y };
-            distance = Math.sqrt(difference.x * difference.x + difference.y * difference.y);
-        }
-    }   
-}
-
-function toggleTrail() {
-    trail = !trail;
-    if (trail){
-        trailToggle.innerHTML = "disable<br/>trail";
-    }else{
-        while (dots.length > 0) {
-            dotsRoot.removeChild(dots.shift().element);
-        }
-        trailToggle.innerHTML = "enable<br/>trail";
+    var size = { width: width(), height: height() };
+    if (canvasSize.width != size.width || canvasSize.height != size.height) {
+        dotsRoot.height = size.height;
+        dotsRoot.width = size.width;
+        canvasSize = size;
     }
+    var point = { x: event.pageX, y: event.pageY }; 
+    hue = (new Date()).getTime() / 512.0;
+
+    context.beginPath();
+    context.arc(point.x, point.y, radius, 0, 2 * Math.PI, false);
+    context.fillStyle = HSVtoRGB(hue, .85, .70);
+    context.fill();
 }
 
 function HSVtoRGB(h, s, v) {
@@ -59,24 +43,6 @@ function HSVtoRGB(h, s, v) {
     return "#" + Math.round(r * 255).toString(16) +
         Math.round(g * 255).toString(16) +
         Math.round(b * 255).toString(16);
-}
-
-function makeDot(position) {
-    hue += .01;
-
-    var newDot = document.createElement("div");
-    newDot.style.backgroundColor = HSVtoRGB(hue, .85, .70);
-    newDot.setAttribute('class', 'dot');
-    newDot.style.left = position.x-radius + "px";
-    newDot.style.top = position.y-radius + "px";
-
-    dotsRoot.appendChild(newDot);
-
-    dots.push({ element: newDot, time: (new Date()).getTime() });
-
-    if (dots.length > length) {
-        dotsRoot.removeChild(dots.shift().element);
-    }
 }
 
 function height() {
