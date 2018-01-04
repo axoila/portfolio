@@ -9,134 +9,143 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <div class="header">
-            <h3>Portfolio Ronja&nbsp;B&ouml;hringer</h3>
-        </div>
+        <div id="root">
 
-        <div class="item-label" onclick="show('ntfa');" id="ntfa-label">
-            <span>No Time For Apocalypse</span>
-        </div>
-        <div class="item-label" onclick="show('small-games');" id="small-games-label">
-            <span>Small Games</span>
-        </div>
-        <div class="item-label" onclick="show('gd3');" id="gd3-label">
-            <span>Elemates</span>
-        </div>
-
-        <div class="portfolio-item" id="summary">
-            <div class="item-overlay">
-                <p>
-                    Hello,
-                </p>
-                <p>
-                    my name is Ronja B&ouml;hringer, I'm a programmer currently looking for a work placement in the games industry. <br/>
-                    I am experienced in Unity with C# and Shaderlab, but I've also used Java, Javascript and C++ in the past and I'm always curious to learn more.
-                </p>
-                <img src="face.jpg"/>
+            <div id="header">
+                <h3>Portfolio</h3>
+                <h1>Ronja B&ouml;hringer</h1>
+                <h3>Programmer</h3>
             </div>
-        </div>
 
-        <div class="portfolio-item" id="ntfa" style="display: none;">
-            <div class="item-overlay">
-                <h2>No Time For Apocalypse</h2>
-                <p>
-                    <b>Role:</b> Management, Design, Programming
-                </p>
-                <p>
-                    A university project I did with two fellow students. In the game you help people with their tasks and then fight the horsemen of the apocalypse.
-                </p>
-                <p>
-                    The game includes 4 levels with one bossfight each and a completely interactive dialogue System based on Yarnspinner.
-                </p>
-                <img src="NtfaWar.gif"/>
-                <p>
-                    Though we weren't able to get the game to a state where I'm 100% happy with it we released it as it is because of time constraints. 
-                    The core development time of the project was about 4 months with some polishing done by myself afterwards. <br/>
-                </p>
-                <p>
-                     It can be found
-                    <a href="https://redye.itch.io/no-time-for-apocalypse" target="_blank">here</a>.
-                </p>
+            <div class="summary">
+                <img src="face.jpg" id="summary-image"/>
+                <div class id="summary-text">
+                    <p>
+                        Hello,
+                    </p>
+                    <p>
+                        my name is Ronja B&ouml;hringer, I'm a programmer currently 
+                        looking for a work placement in the games industry. <br/>
+                        I am experienced in Unity with C# and Shaderlab, but I've also used Java, 
+                        Javascript and C++ in the past and I'm always curious to learn more.
+                    </p>
+                </div>
             </div>
-        </div>
+            
+            <div id="items">
+                <div class="item-label" onclick="show('ntfa');">
+                    <img src="icons/neon_overdrive.png"/>
+                </div>
+                <div class="item-label" onclick="show('small-games');" id="small-games-label">
+                    <img src="icons/ntfa.png"/>
+                </div>
+                <div class="item-label" onclick="show('gd3');" id="gd3-label">
+                    <img src="icons/elemates.png"/>
+                </div>
+            </div>
 
-        <div class="portfolio-item" id="small-games" style="display: none;">
-            <div class="item-overlay">
-                <h2>A multitude of small projects</h2>
-                <p>
-                    <b>Role:</b> Many things
-                </p>
-                <p>
-                    I often make small games in short amounts of time or in small groups at gamejams.
-                    <br/>
-                    Some of my favourite projects I participated on so far are:
-                </p>
+            <div class="portfolio-item" id="ntfa" style="display: none;">
+                <div class="item-overlay">
+                    <h2>No Time For Apocalypse</h2>
+                    <p>
+                        <b>Role:</b> Management, Design, Programming
+                    </p>
+                    <p>
+                        A university project I did with two fellow students. In the game you help people with their tasks and then fight the horsemen of the apocalypse.
+                    </p>
+                    <p>
+                        The game includes 4 levels with one bossfight each and a completely interactive dialogue System based on Yarnspinner.
+                    </p>
+                    <img src="NtfaWar.gif"/>
+                    <p>
+                        Though we weren't able to get the game to a state where I'm 100% happy with it we released it as it is because of time constraints. 
+                        The core development time of the project was about 4 months with some polishing done by myself afterwards. <br/>
+                    </p>
+                    <p>
+                        It can be found
+                        <a href="https://redye.itch.io/no-time-for-apocalypse" target="_blank">here</a>.
+                    </p>
+                </div>
+            </div>
+
+            <div class="portfolio-item" id="small-games" style="display: none;">
+                <div class="item-overlay">
+                    <h2>A multitude of small projects</h2>
+                    <p>
+                        <b>Role:</b> Many things
+                    </p>
+                    <p>
+                        I often make small games in short amounts of time or in small groups at gamejams.
+                        <br/>
+                        Some of my favourite projects I participated on so far are:
+                    </p>
+                    <ul>
+                        <li>
+                            <a href="https://redye.itch.io/neon-overdrive" target="_blank">Neon-Overdrive</a> - programming, design
+                            <ul>
+                                <li>
+                                    When attending Gamescom 2017 to represent my university, a small group of three students, including me, made this small game.
+                                    To fit the unique requirements of such a event, we decided to make a local competetive multiplayer game. 
+                                    It ended up encompassing 2 different levels.
+                                </li>
+                                <img src="neon_overdrive.png" />
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="https://redye.itch.io/hackflug" target="_blank">Hackflug</a> - everything
+                            <ul>
+                                <li>
+                                    A small fangame for "The Inner World". It plays in the same world as the adventure and you 
+                                    play as the pidgeon hack as you try to avoid getting caught by the basyls and do pidgeon things (eat breadcrumbs).
+                                </li>
+                                <img src="Hackflug.gif"/>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="https://redye.itch.io/melonroll" target="_blank">Melonroll</a> - everything
+                            <ul>
+                                <li>
+                                    This game was made for the MelonGameJam leading up to AMAZE 2017. As a 
+                                    melon you try to roll down a hill for as long as possible without breaking.
+                                </li>
+                                <img src="MelonRoll.gif" />
+                            </ul>
+                        </li>
+                    </ul>
+                    <p>
+                        Additionally I hold talks at a monthly local gamedev event.
+                    </p>
+                </div>
+            </div>
+
+            <div class="portfolio-item" id="gd3" style="display: none;">
+                <div class="item-overlay">
+                    <h2>Elemates</h2>
+                    <p>
+                        <b>Role:</b> Lead of the programming team
+                    </p>
+                    <p>
+                        Currently I'm part of a 70 people strong university project where I'm managing the programming team together with one other student. 
+                        At the end of the current semester we're going to present the game at a event we're organizing.
+                    </p>
+                    <img src="ElematesConcept.png" />
+                    <p>
+                        The game will be top down shooter with puzzle elements in a aztec setting with a stylized cellshading look.
+                    </p>
+                    <p>
+                        You can see the event of the previous semester here:
+                        <a href="http://www.global.hs-mittweida.de/~beta/" target="_blank">http://www.global.hs-mittweida.de/~beta/</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="contact">
+                You can contact me:
                 <ul>
-                    <li>
-                        <a href="https://redye.itch.io/neon-overdrive" target="_blank">Neon-Overdrive</a> - programming, design
-                        <ul>
-                            <li>
-                                When attending Gamescom 2017 to represent my university, a small group of three students, including me, made this small game.
-                                To fit the unique requirements of such a event, we decided to make a local competetive multiplayer game. 
-                                It ended up encompassing 2 different levels.
-                            </li>
-                            <img src="neon_overdrive.png" />
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="https://redye.itch.io/hackflug" target="_blank">Hackflug</a> - everything
-                        <ul>
-                            <li>
-                                A small fangame for "The Inner World". It plays in the same world as the adventure and you 
-                                play as the pidgeon hack as you try to avoid getting caught by the basyls and do pidgeon things (eat breadcrumbs).
-                            </li>
-                            <img src="Hackflug.gif"/>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="https://redye.itch.io/melonroll" target="_blank">Melonroll</a> - everything
-                        <ul>
-                            <li>
-                                This game was made for the MelonGameJam leading up to AMAZE 2017. As a 
-                                melon you try to roll down a hill for as long as possible without breaking.
-                            </li>
-                            <img src="MelonRoll.gif" />
-                        </ul>
-                    </li>
+                    <li>per Mail at: <a href='&#109;a&#105;&#108;to&#58;r%6&#70;&#110;%&#54;Aa&#64;b%6Fe&#104;&#114;&#37;69ng&#37;65r-mue&#37;6C%6&#67;e%&#55;2&#46;&#37;6&#52;e'>ro&#110;ja&#64;boe&#104;r&#105;&#110;ge&#114;-mu&#101;&#108;l&#101;r&#46;de</a></li>
+                    <li>on Twitter at: <a href="http://www.twitter.com/axoila">@axoila</a></li>
                 </ul>
-                <p>
-                    Additionally I hold talks at a monthly local gamedev event.
-                </p>
             </div>
-        </div>
-
-        <div class="portfolio-item" id="gd3" style="display: none;">
-            <div class="item-overlay">
-                <h2>Elemates</h2>
-                <p>
-                    <b>Role:</b> Lead of the programming team
-                </p>
-                <p>
-                    Currently I'm part of a 70 people strong university project where I'm managing the programming team together with one other student. 
-                    At the end of the current semester we're going to present the game at a event we're organizing.
-                </p>
-                <img src="ElematesConcept.png" />
-                <p>
-                    The game will be top down shooter with puzzle elements in a aztec setting with a stylized cellshading look.
-                </p>
-                <p>
-                     You can see the event of the previous semester here:
-                    <a href="http://www.global.hs-mittweida.de/~beta/" target="_blank">http://www.global.hs-mittweida.de/~beta/</a>
-                </p>
-            </div>
-        </div>
-
-        <div class="contact">
-            You can contact me:
-            <ul>
-                <li>per Mail at: <a href='&#109;a&#105;&#108;to&#58;r%6&#70;&#110;%&#54;Aa&#64;b%6Fe&#104;&#114;&#37;69ng&#37;65r-mue&#37;6C%6&#67;e%&#55;2&#46;&#37;6&#52;e'>ro&#110;ja&#64;boe&#104;r&#105;&#110;ge&#114;-mu&#101;&#108;l&#101;r&#46;de</a></li>
-                <li>on Twitter at: <a href="http://www.twitter.com/axoila">@axoila</a></li>
-            </ul>
         </div>
     </body>
 </html>

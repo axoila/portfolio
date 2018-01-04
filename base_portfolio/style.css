@@ -6,63 +6,83 @@
 
 body {
     background-color: rgb(63, 63, 63);
-    background-image: url("heart.png");
+    background-image: url(heart.png);
     background-size: contain;
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
 }
 
-img {
-    width: 100%;
-    margin-top: 2%;
-    margin-bottom: 3%;
+#root{
+    margin-left: 20%;
+    margin-right: 20%;
 }
 
-.header{
-    font-size: 1.5em;
+#header{
+    font-size: 1em;
 
     padding: 2%;
     text-align: left;
     background-color: lightgray;
 }
 
-.header h3{
-    margin: 0;
+.summary{
+    float: left;
+    margin-top: 5%;
+}
+
+#summary-image{
+    float: left;
+    width: 35%;
+}
+
+#summary-text{
+    float: left;
+    margin-left: 5%;
+    width: 60%;
+    font-size: 1.1em;
+
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 2% 3% 2% 3%;
+}
+
+#items{
+    float:left;
+    width: 100%;
 }
 
 .item-label{
     float: left;
-    width: 30%;
-    min-height: 3.3em;
-    margin-left: 2.5%;
-    margin-top: 2%;
+    width: 33.3%;
 
     text-align: center;
-    padding-left: 2%;
-    padding-right: 2%;
-    padding-top: 1%;
-    padding-bottom: 1%;
+    overflow: hidden;
+    padding: 0;
     font-size: 1.5em;
 
     background-color: rgba(255, 255, 255, 0.8);
 
-    display: table;
+    filter: grayscale(1);
+    -webkit-filter: grayscale(1);
+
+    -webkit-transition: -webkit-filter 0.5s linear; /* Safari */
+    transition: filter 0.5s linear;
+}
+
+.item-label:hover{
+    filter: grayscale(0);
+    -webkit-filter: grayscale(0);
+}
+
+.item-label img{
+    float: left;
+    width: 100%;
+    margin: 0;
 }
 
 .item-label span{
     display: table-cell;
     vertical-align: middle;
-}
-
-#ntfa-label:hover{
-    background-color: rgb(128, 33, 33);
-}
-#small-games-label:hover{
-    background-color: rgb(80, 69, 179);
-}
-#gd3-label:hover{
-    background-color: rgb(143, 122, 2);
 }
 
 .contact {
@@ -73,40 +93,4 @@ img {
     background-color: lightgray;
     float: left;
     border-radius: 20px;
-}
-
-.portfolio-item {
-    float: left;
-    background-color: rgba(255, 255, 255, 0.8);
-    margin-top: 1em;
-    margin-left: 5%;
-    margin-right: 5%;
-    padding-top: 30%;
-    background-size: cover;
-    background-position: center;
-    padding: 0px;
-}
-
-.item-overlay {
-    margin: 2%;
-    padding-left: 2%;
-    padding-right: 2%;
-    padding-top: 0.1%;
-    padding-bottom: 1%;
-    font-size: 1.2em;
-}
-
-#placeHolder{
-    
-}
-
-@media only screen and (min-width: 1000px) {
-    img {
-        width: 50%;
-    }
-
-    .portfolio-item {
-        width: 60%;
-        margin-left: 20%;
-    }
 }
