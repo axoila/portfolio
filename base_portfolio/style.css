@@ -1,7 +1,7 @@
 * {
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
-    border-radius: 10px;
+    /*border-radius: 10px;*/
 }
 
 body {
@@ -24,6 +24,7 @@ body {
     padding: 2%;
     text-align: left;
     background-color: lightgray;
+	border-radius: 1vw;
 }
 
 .summary{
@@ -34,6 +35,7 @@ body {
 #summary-image{
     float: left;
     width: 35%;
+	border-radius: 1vw;
 }
 
 #summary-text{
@@ -42,7 +44,7 @@ body {
     width: 60%;
     font-size: 1.1em;
 
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 1.0);
     padding: 2% 3% 2% 3%;
 }
 
@@ -62,11 +64,11 @@ body {
 
     background-color: rgba(255, 255, 255, 0.8);
 
-    filter: grayscale(1);
-    -webkit-filter: grayscale(1);
+    filter: grayscale(.75);
+    -webkit-filter: grayscale(.75);
 
-    -webkit-transition: -webkit-filter 0.5s linear; /* Safari */
-    transition: filter 0.5s linear;
+    /*-webkit-transition: -webkit-filter 0.2s linear;*/ /* Safari */
+    /*transition: filter 0.2s linear;*/
 }
 
 .item-label:hover{
