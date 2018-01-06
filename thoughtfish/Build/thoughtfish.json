@@ -1,0 +1,9 @@
+{
+"TOTAL_MEMORY": 268435456,
+"dataUrl": "thoughtfish.data.unityweb",
+"asmCodeUrl": "thoughtfish.asm.code.unityweb",
+"asmMemoryUrl": "thoughtfish.asm.memory.unityweb",
+"asmFrameworkUrl": "thoughtfish.asm.framework.unityweb",
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20"
+}
