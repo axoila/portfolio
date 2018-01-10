@@ -71,7 +71,20 @@ body {
     margin-top: 5%;
 }
 
+.overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s linear;
+}
+
+.overlay:hover{
+    opacity: 1;
+}
+
 .item-label{
+    position: relative;
     float: left;
     width: 33.3%;
 
@@ -79,19 +92,6 @@ body {
     overflow: hidden;
     padding: 0;
     font-size: 1.5em;
-
-    background-color: rgba(255, 255, 255, 0.8);
-
-    filter: grayscale(.75);
-    -webkit-filter: grayscale(.75);
-
-    /*-webkit-transition: -webkit-filter 0.2s linear;*/ /* Safari */
-    /*transition: filter 0.2s linear;*/
-}
-
-.item-label:hover{
-    filter: grayscale(0);
-    -webkit-filter: grayscale(0);
 }
 
 .item-label img{
